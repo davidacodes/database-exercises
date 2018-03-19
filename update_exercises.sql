@@ -29,7 +29,7 @@ WHERE artist = 'Michael Jackson';
 
 # Add SELECT statements after each UPDATE so you can see the results of your handiwork.
 
-SELECT sales FROM albums;
+SELECT name, sales FROM albums;
 
 SELECT * FROM albums WHERE release_date < 1900;
 
