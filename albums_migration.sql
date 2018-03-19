@@ -1,3 +1,5 @@
+SHOW DATABASES;
+
 USE codeup_test_db;
 
 DROP TABLE IF EXISTS albums;
@@ -16,11 +18,11 @@ CREATE TABLE albums (
 
 CREATE TABLE contacts (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  name VARCHAR(50),
-  number VARCHAR(15),
+  name VARCHAR(50) NOT NULL,
+  number VARCHAR(15) NOT NULL,
   email VARCHAR(50),
-  created_at DATETIME,
-  updated_at DATETIME,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -34,7 +36,7 @@ CREATE TABLE pizza_order (
   total_cost DECIMAL(6,2),
   description VARCHAR(50),
   isDelivered TINYINT,
-  created_at DATETIME,
-  updated_at DATETIME,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL,
   PRIMARY KEY (id)
 )
