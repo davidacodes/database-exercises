@@ -28,4 +28,4 @@ SELECT birth_date, hire_date, first_name, last_name
 FROM employees
 WHERE birth_date LIKE '____-12-25'
       AND hire_date like '199%'
-ORDER BY birth_date, hire_date DESC;
+ORDER BY birth_date, hire_date DESC
