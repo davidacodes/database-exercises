@@ -17,10 +17,19 @@ LIMIT 10;
 
 
 SELECT CONCAT( first_name, ' ', last_name, ' has been working at the company for ',
-               DATEDIFF(CURDATE(), hire_date), " days!" )
+               DATEDIFF(CURDATE(), hire_date), " days! That's ", DATEDIFF(CURDATE(), hire_date)/365, " years!"  )
 FROM employees
 WHERE birth_date LIKE '____-12-25'
       AND hire_date like '199%'
 ORDER BY birth_date, hire_date DESC;
+
+SELECT * , DATEDIFF(CURDATE(), hire_date) AS 'Days at company.'
+FROM employees
+WHERE birth_date LIKE '____-12-25'
+      AND hire_date like '199%'
+ORDER BY birth_date, hire_date DESC;
+
+
+
 
 
